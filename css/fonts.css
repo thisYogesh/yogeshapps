@@ -2,19 +2,19 @@
 @font-face {
     font-family: Raleway;
     font-weight: 300;
-    src: url('../fonts/Raleway/Raleway-Light.ttf') format('woff2');
+    src: url('../fonts/Raleway/Raleway-Light.ttf');
 }
 
 /* latin-ext */
 @font-face {
     font-family: Raleway;
     font-weight: 400;
-    src: url('../fonts/Raleway/Raleway-Regular.ttf') format('ttf');
+    src: url('../fonts/Raleway/Raleway-Regular.ttf');
 }
 
 /* latin-ext */
 @font-face {
     font-family: Raleway;
     font-weight: 600;
-    src: url('../fonts/Raleway/Raleway-SemiBold.ttf') format('ttf');
+    src: url('../fonts/Raleway/Raleway-SemiBold.ttf');
   }
