@@ -1,3 +1,75 @@
-/* @import './fonts.css'; */
+@import './fonts.css';
 @import './normalize.css';
 @import './skeleton.css';
+
+.main-container-wrapper{
+    
+}
+
+.side-menu{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #faebd7;
+}
+
+.main-container{
+    width: 80%;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+
+.main-menu-wrapper{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.menu-button {
+    display: block;
+    border: 0;
+    margin-bottom: 0;
+    line-height: 50px;
+    height: 50px;
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.menu-button:hover{
+    color: #000;
+}
+
+.main-menu-item {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.main-menu-item:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-image: linear-gradient(to left, #fff, transparent);
+    width: 100%;
+    bottom: 0;
+}
+
+.main-outer-layout {
+    /* margin: 0 50px; */
+}
+
+.outer-layout{
+    display: flex;
+    height: 100vh;
+}
+
+.main-ico{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding-right: 30px;
+    width: 80px;
+    margin-right: -3px;
+}
