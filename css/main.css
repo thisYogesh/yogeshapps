@@ -116,6 +116,7 @@
 
 .sd-arrow-one {
     z-index: 2;
+    animation: 1.5s 0s blink infinite;
 }
 
 .sd-arrow-one:after {
@@ -126,6 +127,7 @@
 .sd-arrow-two {
     z-index: 1;
     border-width: 9px 9px 0px 9px;
+    animation: 1.5s .5s blink infinite;
 }
 
 .sd-arrow-two:after {
@@ -136,6 +138,7 @@
 .sd-arrow-three {
     z-index: 0;
     border-width: 8px 8px 0px 8px;
+    animation: 1.5s 1s blink infinite;
 }
 
 .sd-arrow-three:after {
@@ -150,6 +153,20 @@
     bottom: 20px;
     left: calc(50% + 10%);
     transform: translateX(-50%);
+    transition: border-color .5s ease;
 }
 
+@keyframes blink{
+    0%{
+        border-color: #7d7d7d transparent;
+    }
+
+    50%{
+        border-color: #000 transparent;   
+    }
+
+    100%{
+        border-color: #7d7d7d transparent;   
+    }
+}
 /* End: Scroll down design */
