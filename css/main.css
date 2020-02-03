@@ -2,10 +2,6 @@
 @import './normalize.css';
 @import './skeleton.css';
 
-.main-container-wrapper{
-    
-}
-
 .side-menu{
     width: 20%;
     display: flex;
@@ -14,10 +10,52 @@
     background-color: #faebd7;
 }
 
+@media (max-width: 640px){
+    .side-menu{
+        position: fixed;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px){
+    .side-menu{
+        width: 205px
+    }
+}
+
+.main-ico{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: auto;
+    padding-right: 30px;
+    width: 80px;
+    margin-right: -3px;
+    transform: none;
+}
+
+@media (max-width: 640px){
+    .main-ico{
+        position: static;
+        padding-right: 0;
+        margin-bottom: -16px;
+        width: 60px;
+    }
+}
+
 .main-menu-wrapper{
     list-style: none;
     width: 100%;
     margin-bottom: 0;
+}
+
+@media (max-width: 640px){
+    .main-menu-wrapper{
+        display: none;
+    }
 }
 
 .menu-button {
@@ -55,17 +93,14 @@
 }
 
 .outer-layout{
-    display: flex;
     height: 100vh;
+    display: flex;
 }
 
-.main-ico{
-    position: absolute;
-    top: 50px;
-    right: 0;
-    padding-right: 30px;
-    width: 80px;
-    margin-right: -3px;
+@media (max-width: 640px){
+    .outer-layout{
+        flex-direction: column;
+    }
 }
 
 .main-logo{
@@ -79,8 +114,22 @@
 }
 
 .main-container{
-    width: 80%;
     box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+}
+
+@media (max-width: 640px){
+    .main-container{
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px){
+    .main-container{
+        width: calc(100% - 205px);
+    }
 }
 
 .main-section{
@@ -90,13 +139,19 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 640px){
+    .main-section{
+        padding-top: 100px;
+    }
+}
+
 /* Start: Scroll down design */
 .sd-arrow {
     display: block;
     width: 0;
     height: 0;
     border-width: 10px 10px 0px 10px;
-    border-color: #7d7d7d transparent;
+    border-color: #c0c0c0 transparent;
     border-style: solid;
     position: relative;
     margin: 0 auto;
@@ -117,6 +172,7 @@
 .sd-arrow-one {
     z-index: 2;
     animation: 1.5s 0s blink infinite;
+    margin-top: 10px;
 }
 
 .sd-arrow-one:after {
@@ -147,18 +203,33 @@
 }
 
 .scroll-down {
-    display: block;
-    width: 20px;
     position: fixed;
+    display: block;
+    width: 40px;
+    height: 40px;
     bottom: 20px;
     left: calc(50% + 10%);
+    background-color: #fff;
+    border-radius: 50%;
     transform: translateX(-50%);
     transition: border-color .5s ease;
 }
 
+@media (max-width: 640px){
+    .scroll-down {
+        left: 50%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px){
+    .scroll-down {
+        left: calc(50% + 205px/2);
+    }
+}
+
 @keyframes blink{
     0%{
-        border-color: #7d7d7d transparent;
+        border-color: #c0c0c0 transparent;
     }
 
     50%{
@@ -166,7 +237,11 @@
     }
 
     100%{
-        border-color: #7d7d7d transparent;   
+        border-color: #c0c0c0 transparent;   
     }
 }
 /* End: Scroll down design */
+
+.para {
+    color: #4a4a4a;
+}
