@@ -54,7 +54,13 @@
 
 @media (max-width: 640px){
     .main-menu-wrapper{
-        display: none;
+        transition: max-height .5s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .main-menu-wrapper.--open {
+        max-height: 200px;
     }
 }
 
@@ -73,6 +79,13 @@
     color: #000;
 }
 
+@media (max-width: 640px){
+    .menu-button{
+        text-align: left;
+        padding: 0 20px;
+    }
+}
+
 .main-menu-item {
     margin-bottom: 0;
     position: relative;
@@ -86,6 +99,12 @@
     background-image: linear-gradient(to left, #fff, transparent);
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 640px){
+    .main-menu-item:after {
+        background-image: linear-gradient(to right, #fff, transparent);
+    }
 }
 
 .main-outer-layout {
@@ -144,6 +163,122 @@
         padding-top: 100px;
     }
 }
+
+.para {
+    color: #4a4a4a;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+@media (max-width: 640px){
+    .toggle-menu{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 3px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 20px;
+    }
+}
+
+.menu-icon{
+    position: relative;
+    height: 2px;
+    background-color: #555;
+    display: block;
+    transition: all .5s ease;
+}
+
+.menu-icon:after, .menu-icon:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: inherit;
+    transition: all .5s ease;
+}
+
+.menu-icon:after {
+    bottom: -5px;
+}
+
+.menu-icon:before {
+    top: -5px;
+}
+
+.--menu-open {
+    background-color: transparent;
+}
+
+.--menu-open:after {
+    transform: rotateZ(45deg);
+    bottom: 0;
+}
+
+.--menu-open:after, .--menu-open:before {
+    background-color: #555;
+}
+
+.--menu-open:before {
+    transform: rotateZ(-45deg);
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Start: Scroll down design */
 .sd-arrow {
@@ -241,7 +376,3 @@
     }
 }
 /* End: Scroll down design */
-
-.para {
-    color: #4a4a4a;
-}
