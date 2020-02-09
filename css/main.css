@@ -104,6 +104,12 @@
 @media (max-width: 640px){
     .main-menu-item:after {
         background-image: linear-gradient(to right, #fff, transparent);
+        left: 19px;
+        right: auto;
+    }
+
+    .main-menu-item:last-child:after{
+        display: none;
     }
 }
 

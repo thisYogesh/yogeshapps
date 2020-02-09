@@ -18,17 +18,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
             let cs = Number(this.dataset.currentSection)
             let top = 0;
+            let update = false
 
-            if(scrollTop > previousSctollTop){
+            if(scrollTop > previousSctollTop && sectionList[cs + 1]){
                 cs++;
-            }else{
+                update = true
+            }else if(sectionList[cs - 1]){
                 cs--;
+                update = true
             }
-            
-            top = sectionList[cs].offsetTop
-            this.dataset.currentSection = cs;
-            this.scrollTo({ top: top, left: 0,behavior: 'smooth' })
-            previousSctollTop = scrollTop
+
+            if(update){
+                top = sectionList[cs].offsetTop
+                this.dataset.currentSection = cs;
+                this.scrollTo({ top: top, left: 0,behavior: 'smooth' })
+                previousSctollTop = scrollTop
+            }
         })
     }
 
