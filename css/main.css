@@ -143,6 +143,9 @@
     width: 80%;
     height: 100%;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    scroll-snap-type: y mandatory;
 }
 
 @media (max-width: 640px){
@@ -162,6 +165,8 @@
     height: 100%;
     padding:50px 50px 0;
     box-sizing: border-box;
+    width: 100%;
+    scroll-snap-align: start;
 }
 
 @media (max-width: 640px){
