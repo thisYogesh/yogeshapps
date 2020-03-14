@@ -10,6 +10,7 @@ body:before{
     border-bottom-right-radius: 6px;
     padding: 2px 5px;
     z-index: 2;
+    display: none;
 }
 
 /* For mobile */

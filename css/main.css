@@ -168,6 +168,7 @@
     box-sizing: border-box;
     width: 100%;
     scroll-snap-align: start;
+    padding-bottom: calc(50vh);
 }
 
 @media (max-width: 640px){
@@ -242,7 +243,9 @@
 }
 
 
-
+.section-title {
+    margin-top: 15px;
+}
 
 
 
